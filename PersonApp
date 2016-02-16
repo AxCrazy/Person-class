@@ -1,0 +1,76 @@
+using System;
+using ICTAP_Console;
+
+namespace MethodApp2
+{
+	public class PersonApp
+	{
+		public static void Main (string[] args)
+		{
+			Console.WriteLine ("Welcome to PersonApp\n");	
+
+			//create a Person and change state
+			Person p = new Person ();
+			p.SetName ("John Doe");
+			p.SetGender ('M');
+			p.SetHeight (180);
+			p.SetDateOfBirth ("11th February 1987");
+			p.SetPPS ("72635818I");
+
+			string name = p.GetName ();
+			char gender = p.GetGender ();
+			double height = p.GetHeight ();
+			string DOB = p.GetDateOfBirth ();
+			string PPS = p.GetPPS ();
+
+			Console.WriteLine ("Name is {0}", name);
+			Console.WriteLine ("Gender: {0}", gender);
+			Console.WriteLine ("Height is {0}", height + "cm");
+			Console.WriteLine ("Date of Birth: {0}", DOB);
+			Console.WriteLine ("PPS Number: {0}", PPS);
+
+			//create a second Person
+			Person q = new Person ();
+			q.SetName ("Jane Doe");
+			q.SetGender ('F');
+			q.SetHeight (170);
+			q.SetDateOfBirth ("1st February 1981");
+			q.SetPPS ("38294705A");
+
+			name = q.GetName ();
+			gender = q.GetGender ();
+			height = q.GetHeight ();
+			DOB = q.GetDateOfBirth ();
+			PPS = q.GetPPS ();
+
+			Console.WriteLine ("\nName is {0}", name);
+			Console.WriteLine ("Gender: {0}", gender);
+			Console.WriteLine ("Height is {0}", height + "cm");
+			Console.WriteLine ("Date of Birth: {0}", DOB);
+			Console.WriteLine ("PPS Number: {0}", PPS);
+
+			//create a third Person
+			Person r = new Person ();
+			r.SetName ("IP Freely");
+			r.SetGender ('T');
+			r.SetHeight (192);
+			r.SetDateOfBirth ("6th August 1945");
+			r.SetPPS ("66666666D");
+
+			name = r.GetName ();
+			gender = r.GetGender ();
+			height = r.GetHeight ();
+			DOB = r.GetDateOfBirth ();
+			PPS = r.GetPPS ();
+
+			Console.WriteLine ("\nName is {0}", name);
+			Console.WriteLine ("Gender: {0}", gender);
+			Console.WriteLine ("Height is {0}", height + "cm");
+			Console.WriteLine ("Date of Birth: {0}", DOB);
+			Console.WriteLine ("PPS Number: {0}", PPS);
+
+			Console.Write ("\nPress RETURN to continue");
+			Console.Read ();
+		}
+	}
+}
